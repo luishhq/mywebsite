@@ -1,0 +1,143 @@
+/* Default styles */
+* {
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+p {
+  font-size: larger;
+}
+
+.indent {
+  text-indent: 25px;
+}
+
+body {
+  background-color: rgb(42, 143, 231);
+}
+
+.custom-navbar {
+  background-color: rgb(27, 135, 230);
+}
+
+header {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+header img {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  height: auto;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+#intro {
+  text-align: justify;
+}
+
+#about {
+  background-image: url('https://images.unsplash.com/photo-1542489441-689de58e358e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+  background-size: cover;
+  color: white;
+  padding: 5%;
+  text-align: justify;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  /* Animation */
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+.linkedin-link {
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  color: #54b3d6;
+  padding: 0 .25rem;
+  margin: 0 -.25rem;
+  transition: color .3s ease-in-out,
+    box-shadow .3s ease-in-out;
+}
+
+.linkedin-link:hover {
+  font-size: 1.2em;
+  box-shadow: inset 200px 0 0 0 #54b3d6;
+  ;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+#about a {
+  color: white;
+}
+
+#site,
+#accomplish,
+#blog {
+  text-align: justify;
+}
+
+#accomplish ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.form-table {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  border-collapse: collapse;
+}
+
+.form-table td {
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.form-table img {
+  width: 100%;
+  height: auto;
+}
+
+/* Media queries */
+/* For screens smaller than 768px */
+@media (max-width: 767px) {
+  header img {
+    width: 200px;
+    padding: 0;
+  }
+
+  #about {
+    padding: 2%;
+  }
+
+  .form-table {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* For screens larger than 768px */
+@media (min-width: 768px) {
+  header img {
+    width: 300px;
+    padding: 10px;
+  }
+
+  #about {
+    padding: 5%;
+  }
+
+  .form-table {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
